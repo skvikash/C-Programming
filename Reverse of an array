@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+main()
+{
+    int n,arr[100],i,temp,firVal,secVal;
+
+    printf("Enter a number ");
+    scanf("%d",&n);
+
+    printf("Enter numbers in array ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+
+    printf("Array before reverse ");
+    for(i=0; i<n; i++)
+    {
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+
+    for(i=0; i<n/2; i++)
+    {
+        firVal=arr[i];
+        secVal=arr[n-i-1];
+        arr[i]=secVal;
+        arr[n-i-1]=firVal;
+    }
+
+    printf("Array after reverse ");
+    for(i=0; i<n; i++)
+    {
+        printf("%d",arr[i]);
+    }
+}
