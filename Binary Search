@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+main() {
+
+  int n, i, arr[100], key, first, end, mid;
+
+  printf("Enter a number:");
+  scanf("%d", &n);
+
+  printf("Enter the numbers for array ");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &arr[i]);
+  }
+
+  printf("Enter a key to find ");
+  scanf("%d", &key);
+
+  first = 0;
+  end = n - 1;
+
+  while (first <= end) {
+    mid = (first + end) / 2;
+
+    if (arr[mid] == key) {
+      printf("Key is found at %d place", mid + 1);
+      break;
+    } else if (arr[mid] < key) {
+      first = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+}
