@@ -10,7 +10,6 @@ main() {
   printf("Enter the number of column: ");
   scanf("%d", &column);
 
-
   // Input data in matrix
   for (i = 1; i <= row; i++) {
     printf("Enter %d elements for %d row ", column, i);
@@ -19,7 +18,7 @@ main() {
     }
   }
 
-// Printing of a matrix
+  // Printing of a matrix
   printf("Entered Matrix\n");
   for (i = 1; i <= row; i++) {
     for (j = 1; j <= column; j++) {
@@ -29,12 +28,14 @@ main() {
   }
   printf("\n");
 
-  // Printing upper diagonal of a matrix
-  
+  // Printing upper diagonal of a matrix//
+
   if (row == column) {
     for (i = 1; i <= row; i++) {
-      for (j = i + 1; j <= column; j++) {
-        printf("%d", arr[i][j]);
+      for (j = 1; j <= column; j++) {
+        if (i < j) {
+          printf("%d", arr[i][j]);
+        }
       }
       printf("\n");
     }
