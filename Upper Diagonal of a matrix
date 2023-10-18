@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+main() {
+
+  int row, column, i, j, arr[5][5];
+
+  printf("Enter the number of row: ");
+  scanf("%d", &row);
+
+  printf("Enter the number of column: ");
+  scanf("%d", &column);
+
+
+  // Input data in matrix
+  for (i = 1; i <= row; i++) {
+    printf("Enter %d elements for %d row ", column, i);
+    for (j = 1; j <= column; j++) {
+      scanf("%d", &arr[i][j]);
+    }
+  }
+
+// Printing of a matrix
+  printf("Entered Matrix\n");
+  for (i = 1; i <= row; i++) {
+    for (j = 1; j <= column; j++) {
+      printf("%d", arr[i][j]);
+    }
+    printf("\n");
+  }
+  printf("\n");
+
+  // Printing upper diagonal of a matrix
+  
+  if (row == column) {
+    for (i = 1; i <= row; i++) {
+      for (j = i + 1; j <= column; j++) {
+        printf("%d", arr[i][j]);
+      }
+      printf("\n");
+    }
+  } else {
+    printf("Not a square matrix");
+  }
+}
