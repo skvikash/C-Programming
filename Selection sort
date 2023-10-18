@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+main() {
+
+  int n, i, arr[100], j, temp, smallest;
+
+  printf("Enter a number:");
+  scanf("%d", &n);
+
+  printf("Enter the numbers for array ");
+  for (i = 0; i < n; i++) {
+    scanf("%d", &arr[i]);
+  }
+
+  printf("Before Sorting ");
+  for (i = 0; i < n; i++) {
+    printf("%d, ", arr[i]);
+  }
+
+  printf("\n");
+
+  for (i = 0; i < n - 1; i++) {
+    smallest = i; // Assume first element is smallest
+
+    for (j = i + 1; j < n; j++) {
+
+      if (arr[smallest] > arr[j]) {
+        smallest = j;
+      }
+    }
+    temp = arr[smallest];
+    arr[smallest] = arr[i];
+    arr[i] = temp;
+  }
+  printf("After Sorting ");
+  for (i = 0; i < n; i++) {
+    printf("%d, ", arr[i]);
+  }
+}
