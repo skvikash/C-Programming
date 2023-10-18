@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+main()
+{
+    int n,arr[100],i,key;
+
+    printf("Enter a number ");
+    scanf("%d",&n);
+
+    printf("Enter numbers in array ");
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+
+
+    printf("Enter a key to find ");
+    scanf("%d",&key);
+
+   // User linear search to find key or input.
+
+    for(i=0; i<n; i++)
+    {
+        if(arr[i]==key)
+        {
+            break;
+        }
+    }
+
+    if(i<n)
+    {
+        printf("Found %d",i+1);
+    }
+    else
+    {
+        printf("Not Found");
+    }
+}
