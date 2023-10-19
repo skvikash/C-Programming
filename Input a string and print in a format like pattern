@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+main() {
+
+  char ch[50],i,j;
+  printf("Enter a string ");
+  gets(ch);
+
+  for(i=0; ch[i]!='\0'; i++)
+  {
+      for(j=0; j<i+1; j++)
+      {
+          printf("%c",ch[i]);
+      }
+      printf("\n");
+  }
+
+}
+
+
+
+// Output
+
+g
+rr
+aaa
+pppp
+hhhhh
+iiiiii
+ccccccc
