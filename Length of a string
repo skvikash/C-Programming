@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+main() {
+
+  char ch[50],i,count=0;
+  printf("Enter a string ");
+  gets(ch);
+
+  for(i=0; ch[i]!='\0'; i++)
+  {
+      count++;
+  }
+  printf("%d",count);
+
+}
+
+/*
+
+Output
+
+Enter a string Grapic Era University
+21
+
+/*
+
+
