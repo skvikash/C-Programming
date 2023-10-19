@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+
+main() {
+
+  char ch[50],i,count=0,firVal,secVal;
+  printf("Enter First string ");
+  gets(ch);
+
+
+  for(i=0; ch[i]!='\0'; i++)
+  {
+       count++;
+  }
+
+
+
+  for(i=0; i<count/2; i++)
+  {
+       firVal=ch[i];
+       secVal=ch[count-i-1];
+       ch[i]=secVal;
+       ch[count-i-1]=firVal;
+  }
+
+  for(i=0; ch[i]!='\0'; i++)
+  {
+       printf("%c",ch[i]);
+  }
+
+
+}
+
+
+/*
+Output
+
+Enter First string vikash
+Reverse hsakiv
+
+/*
+
+
+
