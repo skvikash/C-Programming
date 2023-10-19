@@ -17,9 +17,9 @@ main() {
 
 }
 
+/*
 
-
-// Output
+Output
 
 g
 rr
@@ -28,3 +28,5 @@ pppp
 hhhhh
 iiiiii
 ccccccc
+
+*/
