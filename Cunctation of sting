@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include<string.h>
+
+main() {
+
+  char ch[50],ch1[10],ch2[10],j,i,flag=0;
+  printf("Enter First string ");
+  gets(ch1);
+  printf("Enter Second string ");
+  gets(ch2);
+
+  for(i=0; ch1[i]!='\0'; i++){
+    ch[i]=ch1[i];
+  }
+
+  for(j=i; ch2[flag]!='\0'; j++){
+    ch[j]=ch2[flag];
+    flag=flag+1;
+  }
+
+  for(i=0; ch[i]!='\0'; i++){
+    printf("%c",ch[i]);
+  }
+
+
+
+}
+
+/*
+
+Output
+
+Enter First string Vikash
+Enter Second string Kumar
+VikashKumar
+
+*/
+
+
+
