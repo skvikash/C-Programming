@@ -3,7 +3,8 @@
 
 main() {
 
-  char ch[50],ch1[10],ch2[10],j,i,flag=0;
+  char ch[50],ch1[10],ch2[10];
+  int j,i,flag=0;
   printf("Enter First string ");
   gets(ch1);
   printf("Enter Second string ");
